@@ -1,0 +1,88 @@
+ja:
+  rack_dev_mark:
+    demo: develop
+    staging: staging
+  nav:
+    banner: &banner バナー広告
+    yss_ad: YSS
+    keyword_planner: Keyword Planner
+    yss:
+      text: &text_ad テキスト広告
+      keyword: &keyword キーワード
+    facebook: &facebook Facebook
+    pmp_nav: "PMP/PREMIUM AUDIO"
+    pmp: PMP
+    premium_view: Premium View
+    premium_views:
+      in_stream: インストリーム
+    pmps:
+      gate: ゲート
+      billboard: ビルボード静止画
+      billboard_ad: ビルボード動画
+      rectangle: レクタングル静止画
+      rectangle_ad: レクタングル動画
+      inread: インリード
+    facebooks:
+      carousel: Carousel
+      instagram_stories: Instagram Stories
+      link_ad: Link Ad
+      page_like_ad: Page Like Ad
+      still_image: 静止画
+      video_ad: Video Ad
+    ydn: YDN
+    ycd: YCD
+    ydns:
+      banner: バナー広告
+      text: テキスト広告
+      responsive_ad: レスポンシブ広告
+      video_ad: 動画広告
+    responsive_ad: &responsive_ad レスポンシブ広告
+    ydn_ad: YDN動画広告
+    gaw: GAW
+    video: 動画
+    gaws:
+      banner: *banner
+      text: *text_ad
+      keyword: *keyword
+      responsive_ad: *responsive_ad
+      responsive_ads:
+        usually: 通常レスポンシブ
+        display: レスポンシブディスプレイ
+      in_stream: Youtube インストリーム
+      discovery: Youtube ディスカバリー
+      bumper: バンパー
+    ydn: &ydn YDN
+    ydns:
+      banner: *banner
+      text: *text_ad
+      responsive_ad: *responsive_ad
+      video_ad: 動画広告
+    menu: ヘルプ
+    menus:
+      operation_manual: 操作マニュアル
+      operation_manuals:
+        cr_tool: CRレギュレーションツール
+        other_tool: その他ツール
+      regulation_rule: レギュレーションルール
+    twitter: Twitter
+    twitters:
+      picture_tweet: ピクチャツイート
+      websitecard: Websitecard
+      video_websitecard: Video Websitecard
+      image_app_card: ImageAppCard
+      video_app_card: VideoAppCard
+      promo_video: Promo Video
+      in_stream: インストリーム動画
+      conversational_card: カンバセーショナルカード
+      text_checks: テキストチェック
+    line: LINE
+    other_tool: その他ツール
+    other_tools:
+      keyword_planner: Keyword Planner
+      banner_shader: Banner Shader
+      deadlink_checker: Deadlink Checker
+      download_fmt: URL Checker For 依頼FMT
+      cr_comparer: CR Comparer for YCD
+      movie_cutter: MovieCutter
+      order_comparer: Order Comparer
+    premium_audios: Premium Audio
