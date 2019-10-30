@@ -1,0 +1,233 @@
+doctype html
+html
+  head
+    title
+      | Order Comparer
+    = csrf_meta_tags
+    = javascript_pack_tag    "application"
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+
+  body
+    .menu.fixed
+      .col-md-2.col-md-2.col-md-2
+        #logo
+          = image_tag 'logo.png'
+      #nav.col-md-8.col-xs-8.col-xl-8
+        #line-top.sliding-line[style="display: none;"]
+        ul.navigation
+          li.dropdown[style="display: inline-block"]
+            a.dropdown-toggle[href="#" data-toggle="dropdown" style="text-transform: none"]
+              = t "nav.gaw"
+            ul.dropdown-menu
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/gaw/banner/index"]
+                  = t "nav.gaws.banner"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/gaw/text/index"]
+                  = t "nav.gaws.text"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/gaw/keyword/index"]
+                  = t "nav.gaws.keyword"
+              li.dropdown-submenu
+                a.dropdown-toggle[href="#" data-toggle="dropdown" style="text-transform: none"]
+                  = t "nav.gaws.responsive_ad"
+                ul.dropdown-menu
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/gaw/responsive-ad/index"]
+                      = t "nav.gaws.responsive_ads.usually"
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/gaw/responsive-display-ad/index"]
+                      = t "nav.gaws.responsive_ads.display"
+              li.dropdown-submenu
+                a.dropdown-toggle[href="#" data-toggle="dropdown" style="text-transform: none"]
+                  = t "nav.video"
+                ul.dropdown-menu
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/gaw/in-stream/index"]
+                      = t "nav.gaws.in_stream"
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/gaw/discovery/index"]
+                      = t "nav.gaws.discovery"
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/gaw/bumper/index"]
+                      = t "nav.gaws.bumper"
+          li.dropdown
+            a.dropdown-toggle[href="#" data-toggle="dropdown" style="text-transform: none"]
+              = t "nav.yss_ad"
+            ul.dropdown-menu
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/yss/text/index"]
+                  = t "nav.yss.text"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/yss/keyword/index"]
+                  = t "nav.yss.keyword"
+          li.dropdown
+            a.dropdown-toggle[href="#" data-toggle="dropdown" style="text-transform: none"]
+              = t "nav.ydn"
+            ul.dropdown-menu
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/ydn/banner/index"]
+                  = t "nav.ydns.banner"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/ydn/text/index"]
+                  = t "nav.ydns.text"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/ydn/responsive-ad/index"]
+                  = t "nav.ydns.responsive_ad"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/ydn/video-ad/index"]
+                  = t "nav.ydns.video_ad"
+          li
+            a[href="#{ENV['CR_TOOL_HOST']}/ycd/index"]
+              = t "nav.ycd"
+          li.dropdown
+            a.dropdown-toggle[href="#" data-toggle="dropdown" style="text-transform: none"]
+              = t "nav.facebook"
+            ul.dropdown-menu
+              li.dropdown-submenu
+                a.dropdown-toggle[href="#" data-toggle="dropdown" style="text-transform: none"]
+                  = t "nav.facebooks.still_image"
+                ul.dropdown-menu
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/fb/linkad/index"]
+                      = t "nav.facebooks.link_ad"
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/fb/pagelikead/index"]
+                      = t "nav.facebooks.page_like_ad"
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/fb/carousel/index"]
+                      = t "nav.facebooks.carousel"
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/fb/insta/index"]
+                      = t "nav.facebooks.instagram_stories"
+              li.dropdown-submenu
+                a.dropdown-toggle[href="#" data-toggle="dropdown" style="text-transform: none"]
+                  = t "nav.video"
+                ul.dropdown-menu
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/fb/video-linkad/index"]
+                      = t "nav.facebooks.link_ad"
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/fb/videoad/index"]
+                      = t "nav.facebooks.video_ad"
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/fb/insta/index#video"]
+                      = t "nav.facebooks.instagram_stories"
+          li.dropdown
+            a.dropdown-toggle[href="#" data-toggle="dropdown" style="text-transform: none"]
+              = t "nav.twitter"
+            ul.dropdown-menu
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/twitter/picturetweet/index"]
+                  = t "nav.twitters.picture_tweet"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/twitter/websitecard/index"]
+                  = t "nav.twitters.websitecard"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/twitter/video-websitecard/index"]
+                  = t "nav.twitters.video_websitecard"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/twitter/imageappcard/index"]
+                  = t "nav.twitters.image_app_card"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/twitter/videoappcard/index"]
+                  = t "nav.twitters.video_app_card"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/twitter/promovideo/index"]
+                  = t "nav.twitters.promo_video"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/twitter/in-stream/index"]
+                  = t "nav.twitters.in_stream"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/twitter/conversationalcard/index"]
+                  = t "nav.twitters.conversational_card"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/twitter/textcheck/index"]
+                  = t "nav.twitters.text_checks"
+          li
+            a[href="#{ENV['CR_TOOL_HOST']}/LINE/index"]
+              = t "nav.line"
+          li.text-center.dropdown
+            a.dropdown-toggle[href="#" data-toggle="dropdown" style="text-transform: none;"]
+              = t "nav.pmp_nav"
+            ul.dropdown-menu
+              li.dropdown-submenu
+                a.dropdown-toggle[href="#" data-toggle="dropdown" style="text-transform: none"]
+                  = t "nav.pmp"
+                ul.dropdown-menu
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/pmp/gate/index"]
+                      = t "nav.pmps.gate"
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/pmp/billboard-ad/index"]
+                      = t "nav.pmps.billboard_ad"
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/pmp/billboard/index"]
+                      = t "nav.pmps.billboard"
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/pmp/rectangle-ad/index"]
+                      = t "nav.pmps.rectangle_ad"
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/pmp/rectangle/index"]
+                      = t "nav.pmps.rectangle"
+                  li
+                    a[href="#{ENV['CR_TOOL_HOST']}/pmp/inread/index"]
+                      = t "nav.pmps.inread"
+              / li.dropdown-submenu
+              /   a.dropdown-toggle[href="#" data-toggle="dropdown" style="text-transform: none"]
+              /     = t "nav.premium_view"
+              /   ul.dropdown-menu
+              /     li
+              /       a[href="#{ENV['CR_TOOL_HOST']}/premium_view/in-stream/index"]
+              /         = t "nav.premium_views.in_stream"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/premium_audio/index"]
+                  = t "nav.premium_audios"
+          li.dropdown
+            a.dropdown-toggle[href="#" data-toggle="dropdown"]
+              = t "nav.menu"
+            ul.dropdown-menu
+              li.dropdown-submenu
+                a.dropdown-toggle[href="#" data-toggle="dropdown" style="text-transform: none"]
+                  = t "nav.menus.operation_manual"
+                ul.dropdown-menu
+                  li
+                    = link_to t("nav.menus.operation_manuals.cr_tool"), "#{ENV['CR_TOOL_HOST']}/download?filename=operation_manual"
+                  li
+                    = link_to t("nav.menus.operation_manuals.other_tool"), "#{ENV['CR_TOOL_HOST']}/download?filename=operation_manual-othertool"
+              li
+                = link_to t("nav.menus.regulation_rule"), "#{ENV['CR_TOOL_HOST']}/download?filename=regulation_rule"
+        #line-bottom.sliding-line[style="display: none;"]
+      .col-md-2.col-xl-2.col-xs-2
+        ul.navigation
+          li.dropdown
+            a.dropdown-toggle[href="#" data-toggle="dropdown"]
+              = t "nav.other_tool"
+            ul.dropdown-menu
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/keyword_planner/index"]
+                  = t "nav.other_tools.keyword_planner"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/banner_shader/index"]
+                  = t "nav.other_tools.banner_shader"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/deadlink_checker/index"]
+                  = t "nav.other_tools.deadlink_checker"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/download_fmt"]
+                  = t "nav.other_tools.download_fmt"
+              li
+                a[href="#{ENV['CR_TOOL_HOST']}/cr_comparer/index"]
+                  = t "nav.other_tools.cr_comparer"
+              li
+                a[href="#{ENV['MOVIE_CUTTER_HOST']}/#{Rails.env.production? ? '/' : 'movie-cutter/'}index"]
+                  = t "nav.other_tools.movie_cutter"
+              li
+                a[href="#{root_path}"]
+                  = t "nav.other_tools.order_comparer"
+    .loader.hidden
+    #full-content.content
+      .panel-x-content.padding-5
+        .padding-5.col-md-10.col-md-offset-1
+          = yield
