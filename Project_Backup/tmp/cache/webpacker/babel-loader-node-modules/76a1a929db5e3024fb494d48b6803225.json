@@ -1,0 +1,1 @@
+{"ast":null,"code":"//\n// Utility Plugin for setting the configuration\n//\nimport { pluginFactory } from './utils/plugins';\nexport var BVConfigPlugin =\n/*#__PURE__*/\npluginFactory();","map":null,"metadata":{},"sourceType":"module"}

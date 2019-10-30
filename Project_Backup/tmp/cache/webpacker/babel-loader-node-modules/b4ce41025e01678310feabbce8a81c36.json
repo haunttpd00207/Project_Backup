@@ -1,0 +1,1 @@
+{"ast":null,"code":"import upperFirst from './upper-first';\n/**\n * @param {string} prefix\n * @param {string} value\n */\n\nvar prefixPropName = function prefixPropName(prefix, value) {\n  return prefix + upperFirst(value);\n};\n\nexport default prefixPropName;","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { BFormTextarea } from './form-textarea';\nimport { pluginFactory } from '../../utils/plugins';\nvar FormTextareaPlugin =\n/*#__PURE__*/\npluginFactory({\n  components: {\n    BFormTextarea: BFormTextarea,\n    BTextarea: BFormTextarea\n  }\n});\nexport { FormTextareaPlugin, BFormTextarea };","map":null,"metadata":{},"sourceType":"module"}

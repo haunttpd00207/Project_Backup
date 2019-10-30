@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { VBTooltip } from './tooltip';\nimport { pluginFactory } from '../../utils/plugins';\nvar VBTooltipPlugin =\n/*#__PURE__*/\npluginFactory({\n  directives: {\n    VBTooltip: VBTooltip\n  }\n});\nexport { VBTooltipPlugin, VBTooltip };","map":null,"metadata":{},"sourceType":"module"}

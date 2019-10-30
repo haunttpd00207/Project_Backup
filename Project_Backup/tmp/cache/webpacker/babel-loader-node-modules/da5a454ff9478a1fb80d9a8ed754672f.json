@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { VBModal } from './modal';\nimport { pluginFactory } from '../../utils/plugins';\nvar VBModalPlugin =\n/*#__PURE__*/\npluginFactory({\n  directives: {\n    VBModal: VBModal\n  }\n});\nexport { VBModalPlugin, VBModal };","map":null,"metadata":{},"sourceType":"module"}

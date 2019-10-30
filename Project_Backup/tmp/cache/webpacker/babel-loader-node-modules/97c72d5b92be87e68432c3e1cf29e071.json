@@ -1,0 +1,1 @@
+{"ast":null,"code":"import lowerFirst from './lower-first';\n/**\n * @param {string} prefix\n * @param {string} value\n */\n\nvar unprefixPropName = function unprefixPropName(prefix, value) {\n  return lowerFirst(value.replace(prefix, ''));\n};\n\nexport default unprefixPropName;","map":null,"metadata":{},"sourceType":"module"}

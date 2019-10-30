@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { VBPopover } from './popover';\nimport { pluginFactory } from '../../utils/plugins';\nvar VBPopoverPlugin =\n/*#__PURE__*/\npluginFactory({\n  directives: {\n    VBPopover: VBPopover\n  }\n});\nexport { VBPopoverPlugin, VBPopover };","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import Vue from '../../utils/vue';\nimport { BTd } from './td'; // @vue/component\n\nexport var BTh =\n/*#__PURE__*/\nVue.extend({\n  name: 'BTh',\n  \"extends\": BTd,\n  computed: {\n    tag: function tag() {\n      return 'th';\n    }\n  }\n});","map":null,"metadata":{},"sourceType":"module"}

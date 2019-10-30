@@ -1,0 +1,1 @@
+{"ast":null,"code":"/**\n * @param {string} str\n */\nvar lowerFirst = function lowerFirst(str) {\n  str = String(str);\n  return str.charAt(0).toLowerCase() + str.slice(1);\n};\n\nexport default lowerFirst;","map":null,"metadata":{},"sourceType":"module"}

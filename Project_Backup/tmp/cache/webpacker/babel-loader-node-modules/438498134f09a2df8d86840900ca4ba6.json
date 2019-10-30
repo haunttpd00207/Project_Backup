@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { VBScrollspy } from './scrollspy';\nimport { pluginFactory } from '../../utils/plugins';\nvar VBScrollspyPlugin =\n/*#__PURE__*/\npluginFactory({\n  directives: {\n    VBScrollspy: VBScrollspy\n  }\n});\nexport { VBScrollspyPlugin, VBScrollspy };","map":null,"metadata":{},"sourceType":"module"}

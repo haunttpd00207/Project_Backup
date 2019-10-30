@@ -1,0 +1,1 @@
+{"ast":null,"code":"/**\n * Encoding conversion table for JIS X 0212:1990 (Hojo-Kanji) to UTF-8\n */\nvar JISX0212_TO_UTF8_TABLE = null;\nmodule.exports = JISX0212_TO_UTF8_TABLE;","map":null,"metadata":{},"sourceType":"module"}

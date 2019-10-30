@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { BFormSelect } from './form-select';\nimport { pluginFactory } from '../../utils/plugins';\nvar FormSelectPlugin =\n/*#__PURE__*/\npluginFactory({\n  components: {\n    BFormSelect: BFormSelect,\n    BSelect: BFormSelect\n  }\n});\nexport { FormSelectPlugin, BFormSelect };","map":null,"metadata":{},"sourceType":"module"}

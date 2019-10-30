@@ -1,0 +1,1 @@
+{"ast":null,"code":"/**\n * Encoding conversion table for JIS to UTF-8\n */\nvar JIS_TO_UTF8_TABLE = null;\nmodule.exports = JIS_TO_UTF8_TABLE;","map":null,"metadata":{},"sourceType":"module"}

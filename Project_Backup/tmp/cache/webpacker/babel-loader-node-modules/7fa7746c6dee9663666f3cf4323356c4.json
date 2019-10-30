@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { BJumbotron } from './jumbotron';\nimport { pluginFactory } from '../../utils/plugins';\nvar JumbotronPlugin =\n/*#__PURE__*/\npluginFactory({\n  components: {\n    BJumbotron: BJumbotron\n  }\n});\nexport { JumbotronPlugin, BJumbotron };","map":null,"metadata":{},"sourceType":"module"}
