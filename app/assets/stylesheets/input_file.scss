@@ -1,0 +1,46 @@
+.form-table {
+  display: table;
+  width: 100%;
+  .form-group {
+    display: table-row;
+  }
+  .form-label {
+    white-space: nowrap;
+    display: table-column;
+  }
+
+  .form-cell {
+    display: table-cell;
+    padding: 5px 0;
+    vertical-align: middle;
+    width: 1px;
+  }
+
+  .form-row {
+    display: table-row;
+  }
+
+  .form-cell.cell-label {
+    padding-right: 30px;
+    padding-top: 7px;
+    white-space: nowrap;
+    label {
+      margin-bottom: 5px;
+    }
+  }
+
+  .form-cell.cell-input {
+    padding-top: 7px;
+    width: 100%;
+  }
+
+  .text-note {
+    display: table-cell;
+    vertical-align: middle;
+    width: 1px;
+    color: #5bc0de;
+    font-size: 10px;
+    white-space: nowrap;
+    padding-top: 7px;
+  }
+}
