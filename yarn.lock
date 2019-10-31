@@ -1379,6 +1379,7 @@ bootstrap-vue@^2.0.4:
     portal-vue "^2.1.6"
     vue-functional-data-merge "^3.1.0"
 
+<<<<<<< 96c5277ca121f156a143e5bd0e0644ba3023e174
 "bootstrap@>=4.3.1 <5.0.0":
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"
