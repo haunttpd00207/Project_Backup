@@ -7,12 +7,29 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
+import Vue from "vue"
+import App from "../app.vue"
+window.jQuery = require('jquery');
+import _ from "lodash"
+import VueI18n from "vue-i18n"
+import messages from "../locales/ja.js"
+import BootstrapVue from 'bootstrap-vue'
 
-// Uncomment to copy all static images under ../images to the output folder and reference
-// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
-// or the `imagePath` JavaScript helper below.
-//
-// const images = require.context('../images', true)
-// const imagePath = (name) => images(name, true)
+Vue.use(BootstrapVue)
+Vue.use(VueI18n)
 
-console.log('Hello World from Webpacker')
+document.addEventListener('DOMContentLoaded', () => {
+  const i18n = new VueI18n({
+    locale: 'ja',
+    messages,
+  })
+
+  const elementMain = document.getElementById('app')
+  if(elementMain != null) {
+    var appVue = new Vue({
+      el: "#app",
+      i18n,
+      render: h => h(App, {})
+    });
+  }
+})
