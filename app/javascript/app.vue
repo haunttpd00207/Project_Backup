@@ -1,12 +1,20 @@
 <template>
   <div>
+    <h1>asdas{{ nameGoogle }}</h1>
     <h4 class="page-title custom-title">{{ $t("order_comparer.title") }}</h4>
     <div class="content-app">
       <div class="x_panel">
         <div class="x_content">
-          <FileUpload/>
+          <FileUpload
+            :updateState="updateState"
+            :checkYahooFile="checkYahooFile"
+            :getName="getName"
+            :app-data="$data"
+          />
           
-          <DownloadButton/>
+          <DownloadButton
+            :app-data="$data"
+          />
         </div>
       </div>
     </div>
@@ -30,9 +38,36 @@
   import DownloadButton from './components/DownloadButton.vue'
 
   export default {
+    data() {
+      return {
+        fileExcel: '',
+        fileGoogle: '',
+        fileYahoo: '',
+        nameExcel: '',
+        nameGoogle: '',
+        nameYahoo: '',
+        isChooseYahooFile: false,
+        isSearch: false,
+        isVideo: false,
+        isDisplay: false,
+        isLostData: false,
+        message: ''
+      }
+    },
     components: {
       FileUpload,
       DownloadButton
+    },
+    methods: {
+      updateState(type, result) {
+        this[type] = result
+      },
+      checkYahooFile(type, result) {
+        this[type] = result
+      },
+      getName(type, result) {
+        this[type] = result
+      }
     }
   }
 </script>

@@ -9,7 +9,6 @@
 
 import Vue from "vue"
 import App from "../app.vue"
-window.jQuery = require('jquery');
 import _ from "lodash"
 import VueI18n from "vue-i18n"
 import messages from "../locales/ja.js"

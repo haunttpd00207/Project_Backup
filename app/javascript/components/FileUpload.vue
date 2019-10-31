@@ -14,9 +14,11 @@
               <span class="desc_url">{{ $t("order_comparer.desc_url") }}</span>
             </div>
             <div class="input-group">
-              <input type="text" class="form-control" :placeholder="$t('order_comparer.hide_fmt')">
+              <input type="text" class="form-control" :placeholder="appData.fileExcel ? appData.nameExcel : $t('order_comparer.hide_fmt')">
               <span class="input-group-btn">
-                <b-button variant="primary" class="btn btn-primary button-size btn-file"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; {{ $t('order_comparer.import') }}</b-button>
+                <b-button v-on:click.prevent="openExcelFile" variant="primary" class="btn btn-primary button-size btn-file"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; {{ $t('order_comparer.import') }}</b-button>
+                <b-form-file  @change="readFileExcel"
+  accept=".xlsm, .xlsx" id="file_excel" style="display: none"></b-form-file>
               </span>
             </div>
           </div>
@@ -38,9 +40,10 @@
               <span class="desc_url">{{ $t("order_comparer.desc_url") }}</span>
             </div>
             <div class="input-group">
-              <input type="text" class="form-control" :placeholder="$t('order_comparer.hide_google')">
+              <input type="text" class="form-control" :placeholder="appData.fileGoogle ? appData.nameGoogle : $t('order_comparer.hide_google')">
               <span class="input-group-btn">
-                <b-button variant="primary" class="btn btn-primary button-size btn-file"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; {{ $t('order_comparer.import') }}</b-button>
+                <b-button v-on:click.prevent="openGoogleFile" variant="primary" class="btn btn-primary button-size btn-file"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; {{ $t('order_comparer.import') }}</b-button>
+                <b-form-file @change="readFileGoogle" accept=".csv" id="file_google_csv" style="display: none"></b-form-file>
               </span>
             </div>
           </div>
@@ -62,9 +65,10 @@
               <span class="desc_url">{{ $t("order_comparer.desc_url") }}</span>
             </div>
             <div class="input-group">
-              <input type="text" class="form-control" :placeholder="$t('order_comparer.hide_yahoo')">
+              <input type="text" class="form-control" :placeholder="appData.fileYahoo ? appData.nameYahoo : $t('order_comparer.hide_yahoo')">
               <span class="input-group-btn">
-                <b-button variant="primary" class="btn btn-primary button-size btn-file"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; {{ $t('order_comparer.import') }}</b-button>
+                <b-button v-on:click.prevent="openYahooFile" variant="primary" class="btn btn-primary button-size btn-file"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; {{ $t('order_comparer.import') }}</b-button>
+                <b-form-file @change="readFileYahoo" accept=".csv" id="file_yahoo_csv" style="display: none"></b-form-file>
               </span>
             </div>
           </div>
@@ -73,6 +77,65 @@
     </div>
   </div>
 </template>
+<script>
+  import XLSX from 'xlsx'
+ export default {
+  props: {
+    updateState: {
+      type: Function
+    },
+    checkYahooFile: {
+      type: Function
+    },
+    getName: {
+      type: Function
+    },
+    appData: {
+      type: Object,
+      required: true
+    }
+  },
+
+  methods: {
+    openExcelFile: function() {
+      $("#file_excel").click();
+    },
+
+    openGoogleFile: function() {
+      $("#file_google_csv").click();
+    },
+
+    openYahooFile: function() {
+      $("#file_yahoo_csv").click();
+    },
+
+    readFileExcel(ev) {
+      const file = ev.target.files[0];
+      const reader = new FileReader();
+      reader.onload = e => this.updateState("fileExcel", e.target.result);
+      this.getName("nameExcel", file.name);
+      reader.readAsBinaryString(file);
+
+    },
+    
+    readFileGoogle(ev) {
+      const file = ev.target.files[0];
+      const reader = new FileReader();
+      reader.onload = e => this.updateState("fileGoogle", e.target.result);
+      this.getName("nameGoogle", file.name);
+      reader.readAsBinaryString(file);
+    },
+    readFileYahoo(ev) {
+      const file = ev.target.files[0];
+      const reader = new FileReader();
+      reader.onload = e => this.updateState("fileYahoo", e.target.result);
+      this.getName("fileYahoo", file.name);
+      this.checkYahooFile("isChooseYahooFile", true);
+      reader.readAsBinaryString(file);
+    }
+  }
+}
+</script>
 <style>
 .col-md-12.upload {
   padding-top: 7px;
