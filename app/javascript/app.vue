@@ -13,6 +13,7 @@
             :submit="submit"
           />
         </div>
+        <button @click="testSend"> Send </button>
       </div>
     </div>
     <div class="x_panel no-border no-background" >
@@ -33,10 +34,10 @@
 <script>
   import bootbox from 'bootbox'
   import _ from 'lodash'
+  import order from './api/order_comparers'
   import FileUpload from './components/FileUpload.vue'
   import DownloadButton from './components/DownloadButton.vue'
   import XLSX from 'xlsx'
-
   export default {
     data() {
       return {
@@ -139,7 +140,24 @@
       
       updateState(type, result) {
         this[type] = result
-      },
+      }
+    },
+
+    computed: {
+      getTypeAd() {
+        var self = this
+        var type_ads = '';
+        if (!self.isNothing) {
+          if (self.isSearch) {
+            type_ads = 'サーチの場合'
+          } else if (self.isVideo) {
+            type_ads = 'ディスプレイの場合'
+          } else if (self.isDisplay) {
+            type_ads = '動画の場合'
+          }
+            return type_ads
+        }
+      }
     }
   }
 </script>

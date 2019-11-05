@@ -55,3 +55,4 @@ gem "slim-rails"
 gem "jquery-rails"
 gem "bootstrap-sass"
 gem "dotenv-rails"
+gem 'whenever', require: false
