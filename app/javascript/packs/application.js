@@ -10,20 +10,17 @@
 import Vue from "vue"
 import App from "../app.vue"
 window.jQuery = require('jquery');
+require('bootstrap');
+import "bootstrap/dist/css/bootstrap.min.css"
 import _ from "lodash"
 import VueI18n from "vue-i18n"
 import messages from "../locales/ja.js"
-import BootstrapVue from 'bootstrap-vue'
-
-Vue.use(BootstrapVue)
 Vue.use(VueI18n)
-
 document.addEventListener('DOMContentLoaded', () => {
   const i18n = new VueI18n({
     locale: 'ja',
     messages,
   })
-
   const elementMain = document.getElementById('app')
   if(elementMain != null) {
     var appVue = new Vue({
