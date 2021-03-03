@@ -13,7 +13,7 @@
     "vue-template-compiler": "^2.6.10"
   },
   "devDependencies": {
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
     "webpack-dev-server": "^3.9.0"
   }
